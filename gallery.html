@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -36,20 +35,23 @@
         }
     </script>
 </head>
-<body>
-    
 
-        
+<body>
+
+
+
     <!-- NAV -->
     <nav
         class="flex hero justify-between items-center px-8 py-5 sticky top-0 bg-black/85 backdrop-blur-md z-50 border-b border-white/10">
         <div class="text-2xl font-bold tracking-widest serif uppercase">A<span class="text-luxury-copper">w</span>H
         </div>
         <div class="hidden md:flex gap-10 text-xs uppercase tracking-widest text-gray-400">
-               <a href="index.html" class="hover:text-luxury-copper transition">Home</a>
+            <a href="index.html" class="hover:text-luxury-copper transition">Home</a>
+            <a href="about.html" class="hover:text-luxury-copper transition">About</a>
             <a href="shop.html" class="hover:text-luxury-copper transition">Shop</a>
-            <a href="gallery.html" class="hover:text-luxury-cream transition">Gallery</a>
-            <a href="#about" class="hover:text-luxury-cream transition">About</a>
+            <a href="gallery.html" class="hover:text-luxury-copper transition">Gallery</a>
+            <a href="contactus.html" class="hover:text-luxury-copper transition">Contact</a>
+
         </div>
         <div class="flex items-center space-x-4">
             <i
@@ -69,92 +71,137 @@
             </button>
         </div>
     </nav>
-    
+
     <div id="mobile-nav" class="md:hidden bg-black/90 border-b border-white/10 px-8">
         <div class="py-5 flex flex-col gap-5 text-xs uppercase tracking-widest text-gray-400">
-            <a href="#collection" class="mobile-link hover:text-luxury-copper transition">Collections</a>
-            <a href="#collection" class="mobile-link hover:text-luxury-copper transition">New Arrivals</a>
-            <a href="#about" class="mobile-link hover:text-luxury-copper transition">About</a>
+            <a href="index.html" class="mobile-link hover:text-luxury-copper transition">Home</a>
+            <a href="about.html" class="mobile-link hover:text-luxury-copper transition">About</a>
+            <a href="shop.html" class="mobile-link hover:text-luxury-copper transition">Shop</a>
+            <a href="gallery.html" class="mobile-link hover:text-luxury-copper transition">Gallery</a>
+            <a href="contactus.html" class="mobile-link hover:text-luxury-copper transition">Contact</a>
+
         </div>
     </div>
 
 
 
-        <!-- HERO -->
+    <!-- HERO -->
     <section class="relative h-[50vh] w-full flex items-center justify-start overflow-hidden bg-black">
-    
-    <div class="absolute inset-0 z-0">
-        <img src="https://wallpapercave.com/wp/wp15444648.jpg" class="w-full h-full object-cover scale-110">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/20 to-transparent"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
-    </div>
 
-    <div class="relative z-10 text-left px-6 ml-0 md:ml-6 lg:ml-12 max-w-2xl">
-        <p class="font-sans text-[9px] uppercase tracking-[0.5em] text-luxury-copper mb-4">
-            AWH Collective
-        </p>
-        <h1 class="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight">
-            The Gallery
-        </h1>
-    </div>
-
-    <div class="absolute bottom-8 left-12 z-20 hidden md:block">
-        <nav class="font-sans text-[8px] uppercase tracking-[0.3em] text-gray-500">
-            <a href="index.html" class="hover:text-white transition">Home</a> 
-            <span class="mx-2 text-luxury-copper">/</span> 
-            <span class="text-zinc-300">Gallery</span>
-        </nav>
-    </div>
-</section>
-
-
-
-<section class="pt-30 pb-32 container mx-auto px-6 max-w-7xl">
-
-
-    <div class="columns-1 md:columns-2 lg:columns-3 gap-10 space-y-10">
-        
-        <div class="relative overflow-hidden group border border-white/5 bg-zinc-900 shadow-xl">
-            <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg" 
-                 class="w-full h-auto  group-hover:scale-110 transition duration-1000 ease-out">
-            <div class="absolute bottom-6 left-6 p-4 bg-black/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500">
-                <span class="font-sans text-[8px] uppercase tracking-widest text-white">AWH</span>
-            </div>
+        <div class="absolute inset-0 z-0">
+            <img src="https://wallpapercave.com/wp/wp15444648.jpg" class="w-full h-full object-cover scale-110">
+            <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/20 to-transparent"></div>
+            <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
         </div>
 
-        <div class="relative overflow-hidden group border border-white/5 bg-zinc-900 lg:mt-16">
-            <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg" 
-                 class="w-full h-auto  group-hover:scale-105 transition duration-1000 ease-out">
-            <div class="absolute bottom-6 left-6 p-4 bg-black/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500">
-                <span class="font-sans text-[8px] uppercase tracking-widest text-white">Rolex</span>
-            </div>
+        <div class="relative z-10 text-left px-6 ml-0 md:ml-6 lg:ml-12 max-w-2xl">
+            <p class="font-sans text-[9px] uppercase tracking-[0.5em] text-luxury-copper mb-4">
+                AWH Collective
+            </p>
+            <h1 class="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight">
+                The Gallery
+            </h1>
         </div>
 
-        <div class="relative overflow-hidden group border border-white/5 bg-zinc-900">
-            <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg" 
-                 class="w-full h-auto  group-hover:scale-105 transition duration-1000 ease-out">
-            <div class="absolute bottom-6 left-6 p-4 bg-black/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500">
-                <span class="font-sans text-[8px] uppercase tracking-widest text-white">Engineering Excellence</span>
-            </div>
+        <div class="absolute bottom-8 left-12 z-20 hidden md:block">
+            <nav class="font-sans text-[8px] uppercase tracking-[0.3em] text-gray-500">
+                <a href="index.html" class="hover:text-white transition">Home</a>
+                <span class="mx-2 text-luxury-copper">/</span>
+                <span class="text-zinc-300">Gallery</span>
+            </nav>
         </div>
+    </section>
 
-        <div class="relative overflow-hidden group border border-white/5 bg-zinc-900 lg:mt-[-8rem]">
-            <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg" 
-                 class="w-full h-auto  group-hover:scale-105 transition duration-1000 ease-out">
-            <div class="absolute bottom-6 left-6 p-4 bg-black/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500">
-                <span class="font-sans text-[8px] uppercase tracking-widest text-white">Heritage Sourcing</span>
-            </div>
-        </div>
 
-        <div class="relative overflow-hidden group border border-white/5 bg-zinc-900">
-            <img src="https://images.pexels.com/photos/190819/pexels-photo-190819.jpeg" 
-                 class="w-full h-auto group-hover:scale-105 transition duration-1000 ease-out">
-            <div class="absolute bottom-6 left-6 p-4 bg-black/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500">
-                <span class="font-sans text-[8px] uppercase tracking-widest text-white">AWH Atmosphere</span>
+
+    <section class="pt-30 pb-32 container mx-auto px-6 max-w-7xl">
+
+
+        <div class="columns-1 md:columns-2 lg:columns-3 gap-10 space-y-10">
+
+            <div class="relative overflow-hidden group border border-white/5 bg-zinc-900 shadow-xl">
+                <img src="https://images.pexels.com/photos/20619302/pexels-photo-20619302.jpeg"
+                    class="w-full h-auto  group-hover:scale-110 transition duration-1000 ease-out">
+                <div
+                    class="absolute bottom-6 left-6 p-4 bg-black/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500">
+                    <span class="font-sans text-[8px] uppercase tracking-widest text-white">AWH</span>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden group border border-white/5 bg-zinc-900 lg:mt-16">
+                <img src="https://images.unsplash.com/photo-1526743655626-e3d757b13d61?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="w-full h-auto  group-hover:scale-105 transition duration-1000 ease-out">
+                <div
+                    class="absolute bottom-6 left-6 p-4 bg-black/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500">
+                    <span class="font-sans text-[8px] uppercase tracking-widest text-white">Rolex</span>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden group border border-white/5 bg-zinc-900">
+                <img src="https://images.pexels.com/photos/10343908/pexels-photo-10343908.jpeg"
+                    class="w-full h-auto  group-hover:scale-105 transition duration-1000 ease-out">
+                <div
+                    class="absolute bottom-6 left-6 p-4 bg-black/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500">
+                    <span class="font-sans text-[8px] uppercase tracking-widest text-white">Engineering
+                        Excellence</span>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden group border border-white/5 bg-zinc-900 lg:mt-[-8rem]">
+                <img src="https://images.unsplash.com/photo-1649357584808-333476473dce?q=80&w=2070&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                    class="w-full h-auto  group-hover:scale-105 transition duration-1000 ease-out">
+                <div
+                    class="absolute bottom-6 left-6 p-4 bg-black/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500">
+                    <span class="font-sans text-[8px] uppercase tracking-widest text-white">Rolex Sourcing</span>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden group border border-white/5 bg-zinc-900">
+                <img src="https://images.pexels.com/photos/28697832/pexels-photo-28697832.jpeg"
+                    class="w-full h-auto group-hover:scale-105 transition duration-1000 ease-out">
+                <div
+                    class="absolute bottom-6 left-6 p-4 bg-black/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500">
+                    <span class="font-sans text-[8px] uppercase tracking-widest text-white">AWH Atmosphere</span>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden group border border-white/5 bg-zinc-900">
+                <img src="https://mediastock.live/catalog/2026/05/13/watch_177868512399715.jpeg?width=1024"
+                    class="w-full h-auto group-hover:scale-105 transition duration-1000 ease-out">
+                <div
+                    class="absolute bottom-6 left-6 p-4 bg-black/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500">
+                    <span class="font-sans text-[8px] uppercase tracking-widest text-white">AWH Atmosphere</span>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden group border border-white/5 bg-zinc-900">
+                <img src="https://mediastock.live/catalog/2026/02/19/watch_177150744363946.jpeg?width=1024"
+                    class="w-full h-auto group-hover:scale-105 transition duration-1000 ease-out">
+                <div
+                    class="absolute bottom-6 left-6 p-4 bg-black/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500">
+                    <span class="font-sans text-[8px] uppercase tracking-widest text-white">AWH Atmosphere</span>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden group border border-white/5 bg-zinc-900">
+                <img src="https://mediastock.live/catalog/2022/09/19/watch_166360217042683.jpeg"
+                    class="w-full h-auto group-hover:scale-105 transition duration-1000 ease-out">
+                <div
+                    class="absolute bottom-6 left-6 p-4 bg-black/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500">
+                    <span class="font-sans text-[8px] uppercase tracking-widest text-white">AWH Atmosphere</span>
+                </div>
+            </div>
+
+            <div class="relative overflow-hidden group border border-white/5 bg-zinc-900">
+                <img src="https://images.pexels.com/photos/29324399/pexels-photo-29324399.jpeg"
+                    class="w-full h-auto group-hover:scale-105 transition duration-1000 ease-out">
+                <div
+                    class="absolute bottom-6 left-6 p-4 bg-black/50 backdrop-blur-sm opacity-0 group-hover:opacity-100 transition duration-500">
+                    <span class="font-sans text-[8px] uppercase tracking-widest text-white">Authencity </span>
+                </div>
             </div>
         </div>
-    </div>
-</section>
+    </section>
 
 
 
@@ -209,28 +256,28 @@
                     </div>
                 </div>
             </div>
-            
-           <div class="pt-10 border-t border-white/5 flex flex-col items-center">
-    
-    <div class="grid grid-cols-4 gap-7 text-gray-500 text-sm mb-8">
-        <a href="#" class="hover:text-white transition flex justify-center items-center">
-            <i class="fa-brands fa-instagram"></i>
-        </a>
-        <a href="#" class="hover:text-white transition flex justify-center items-center">
-            <i class="fa-brands fa-twitter"></i>
-        </a>
-        <a href="#" class="hover:text-white transition flex justify-center items-center">
-            <i class="fa-brands fa-facebook-f"></i>
-        </a>
-        <a href="#" class="hover:text-white transition flex justify-center items-center">
-            <i class="fa-brands fa-linkedin-in"></i>
-        </a>
-    </div>
 
-    <div class="text-[9px] text-gray-600 uppercase tracking-[0.4em] text-center leading-loose">
-        <p>&copy; 2026 AWH Curated Timepieces <span class="mx-2">—</span> All Rights Reserved.</p>
-    </div>
-</div>
+            <div class="pt-10 border-t border-white/5 flex flex-col items-center">
+
+                <div class="grid grid-cols-4 gap-7 text-gray-500 text-sm mb-8">
+                    <a href="#" class="hover:text-white transition flex justify-center items-center">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition flex justify-center items-center">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition flex justify-center items-center">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition flex justify-center items-center">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+                <div class="text-[9px] text-gray-600 uppercase tracking-[0.4em] text-center leading-loose">
+                    <p>&copy; 2026 AWH Curated Timepieces <span class="mx-2">—</span> All Rights Reserved.</p>
+                </div>
+            </div>
 
     </footer>
 
@@ -248,10 +295,11 @@
             <path d="M12 19V5M5 12l7-7 7 7" />
         </svg>
     </button>
-        <!-- cursor ring animation -->
+    <!-- cursor ring animation -->
     <div id="cursor-dot"></div>
     <div id="cursor-ring"></div>
-<script src="script.js"></script>
+    <script src="script.js"></script>
 
 </body>
+
 </html>

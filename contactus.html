@@ -8,7 +8,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
     <link href="./output.css" rel="stylesheet">
-    <!-- Roboto font -->
+
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
@@ -37,9 +37,6 @@
 </head>
 
 <body>
-
-
-
     <!-- NAV -->
     <nav
         class="flex hero justify-between items-center px-8 py-5 sticky top-0 bg-black/85 backdrop-blur-md z-50 border-b border-white/10">
@@ -47,11 +44,14 @@
         </div>
         <div class="hidden md:flex gap-10 text-xs uppercase tracking-widest text-gray-400">
             <a href="index.html" class="hover:text-luxury-copper transition">Home</a>
-            <a href="about.html" class="hover:text-luxury-copper transition">About</a>
             <a href="shop.html" class="hover:text-luxury-copper transition">Shop</a>
-            <a href="gallery.html" class="hover:text-luxury-copper transition">Gallery</a>
-            <a href="contactus.html" class="hover:text-luxury-copper transition">Contact</a>
+            <a href="gallery.html" class="hover:text-luxury-cream transition">Gallery</a>
+            <a href="about.html" class="hover:text-luxury-cream transition">About</a>
+            <a href="contactus.html" class="hover:text-luxury-cream transition">Contact</a>
+
+
         </div>
+
         <div class="flex items-center space-x-4">
             <i
                 class="fa-solid fa-magnifying-glass text-sm text-gray-400 hover:text-white cursor-pointer transition"></i>
@@ -73,78 +73,99 @@
 
     <div id="mobile-nav" class="md:hidden bg-black/90 border-b border-white/10 px-8">
         <div class="py-5 flex flex-col gap-5 text-xs uppercase tracking-widest text-gray-400">
-              <a href="index.html" class="mobile-link hover:text-luxury-copper transition">Home</a>
-              <a href="about.html" class="mobile-link hover:text-luxury-copper transition">About</a>
+            <a href="index.html" class="mobile-link hover:text-luxury-copper transition">Home</a>
+            <a href="about.html" class="mobile-link hover:text-luxury-copper transition">About</a>
             <a href="shop.html" class="mobile-link hover:text-luxury-copper transition">Shop</a>
             <a href="gallery.html" class="mobile-link hover:text-luxury-copper transition">Gallery</a>
-            <a href="contactus.html" class="mobile-link hover:text-luxury-copper transition">Contact</a>
-
+            <a href="contactus.html" class="mobile-link hover:text-luxury-cream transition">Contact</a>
 
         </div>
     </div>
 
 
+    <section class="py-32 container mx-auto px-6 max-w-6xl">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
 
-    <!-- HERO -->
-   <section class="relative h-[50vh] w-full flex items-center justify-start overflow-hidden bg-black">
-    
-    <div class="absolute inset-0 z-0">
-        <img src="https://wallpapercave.com/wp/wp8824896.jpg" class="w-full h-full object-cover scale-110">
-        <div class="absolute inset-0 bg-gradient-to-r from-black/80 via-black/20 to-transparent"></div>
-        <div class="absolute inset-0 bg-gradient-to-b from-transparent to-black"></div>
-    </div>
-    
-    <div class="relative z-10 text-left px-6 ml-0 md:ml-6 lg:ml-12 max-w-2xl">
-        <p class="font-sans text-[9px] uppercase tracking-[0.5em] text-luxury-copper mb-4">
-            AWH Collection
-        </p>
-        <h1 class="font-serif text-5xl md:text-6xl text-white tracking-tight leading-tight">
-            The Shop
-        </h1>
-    </div>
+            <div>
+                <span class="text-luxury-copper uppercase tracking-[0.3em] text-[10px] block mb-3">Private
+                    Showroom</span>
+                <h1 class="serif text-5xl text-white mb-6">Let's Connect</h1>
+                <p class="text-gray-400 text-sm max-w-md leading-relaxed mb-12">
+                    Whether you are seeking a specific investment timepiece or looking to inquire about our curated
+                    collection, our team is here to assist you.
+                </p>
 
-    <div class="absolute bottom-8 left-12 z-20 hidden md:block">
-        <nav class="font-sans text-[8px] uppercase tracking-[0.3em] text-gray-500">
-            <a href="index.html" class="hover:text-white transition">Home</a> 
-            <span class="mx-2 text-luxury-copper">/</span> 
-            <span class="text-zinc-300">Shop</span>
-        </nav>
-    </div>
-</section>
-
-<!-- 1. Remove container/padding from section, keep only vertical padding -->
-    <section class="pt-40 pb-16">
-        <!-- 2. Move container, mx-auto, and px-6 here to protect your text boundaries -->
-        <div class="container mx-auto px-6">
-            <div class="flex flex-col md:flex-row justify-between items-start md:items-end gap-8">
-                <div>
-                    <h1 class="serif text-5xl mb-4">The Collection</h1>
-                    <p class="text-gray-500 uppercase tracking-widest text-[10px]">Showing all curated timepieces</p>
-                </div>
-                <!-- Widen the row to screen edges on mobile, but keep it constrained inside the container -->
-                <div class="flex gap-4 overflow-x-auto pb-2 scrollbar-hide w-full md:w-auto">
-                    <button onclick="filterShop('all', this)"
-                        class="filter-btn px-6 py-2 border border-luxury-copper text-luxury-copper text-[10px] uppercase tracking-widest transition">All</button>
-                    <button onclick="filterShop('rolex', this)"
-                        class="filter-btn px-6 py-2 border border-white/10 text-white text-[10px] uppercase tracking-widest hover:border-luxury-copper transition">Rolex</button>
-                    <button onclick="filterShop('hublot', this)"
-                        class="filter-btn px-6 py-2 border border-white/10 text-white text-[10px] uppercase tracking-widest hover:border-luxury-copper transition">Hublot</button>
-                    <button onclick="filterShop('cartier', this)"
-                        class="filter-btn px-6 py-2 border border-white/10 text-white text-[10px] uppercase tracking-widest hover:border-luxury-copper transition">Cartier</button>
+                <div class="space-y-8">
+                    <div class="flex items-center gap-4">
+                        <div class="w-2 h-2 rounded-full bg-luxury-copper"></div>
+                        <div>
+                            <p class="text-gray-500 text-[9px] uppercase tracking-widest">Email Us</p>
+                            <p class="text-white text-sm font-light mt-0.5">hello@awh.com</p>
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-4">
+                        <div class="w-2 h-2 rounded-full bg-luxury-copper"></div>
+                        <div>
+                            <p class="text-gray-500 text-[9px] uppercase tracking-widest">Visit Appointment</p>
+                            <p class="text-white text-sm font-light mt-0.5">Lekki, Lagos, Nigeria</p>
+                        </div>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Do the same for your grid section to make sure it aligns perfectly down to the pixel -->
-    <section class="pb-24">
-        <div class="container mx-auto px-6">
-            <div id="shop-grid" class="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-4 gap-x-8 gap-y-16 aspect-ratio-square">
-               
+            <div class="bg-[#0B0B0B] border border-white/5 p-8 md:p-10 rounded-sm">
+                <form class="space-y-8">
+                    <div>
+                        <label class="text-[9px] text-gray-400 uppercase tracking-widest block mb-2">Full Name</label>
+                        <input type="text"
+                            class="w-full bg-transparent border-b border-white/10 py-2 text-white focus:border-luxury-copper outline-none transition text-sm">
+                    </div>
+                    <div>
+                        <label class="text-[9px] text-gray-400 uppercase tracking-widest block mb-2">Email
+                            Address</label>
+                        <input type="email"
+                            class="w-full bg-transparent border-b border-white/10 py-2 text-white focus:border-luxury-copper outline-none transition text-sm">
+                    </div>
+                    <div>
+                        <label class="text-[9px] text-gray-400 uppercase tracking-widest block mb-2">Desired Timepiece
+                            (Optional)</label>
+                        <input type="text" placeholder="Rolex Submariner"
+                            class="w-full bg-transparent border-b border-white/10 py-2 text-neutral-500 focus:border-luxury-copper outline-none transition text-sm">
+                    </div>
+                    <div>
+                        <label class="text-[9px] text-gray-400 uppercase tracking-widest block mb-2">Message</label>
+                        <textarea rows="4"
+                            class="w-full bg-transparent border-b border-white/10 py-2 text-white focus:border-luxury-copper outline-none transition text-sm resize-none"></textarea>
+                    </div>
+
+                    <button
+                        class="w-full bg-luxury-copper text-luxury-black text-xs font-semibold tracking-widest uppercase py-4 hover:bg-white hover:text-black transition duration-300 rounded-sm mt-4">
+                        Send Inquiry
+                    </button>
+                </form>
             </div>
-        </div>
-    </section>
 
+        </div>
+
+        <!-- Full-Width Map Breakout Section -->
+        <section class="w-full h-96 bg-[#0B0B0B] border-t border-b mt-20 border-white/5 overflow-hidden relative">
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4315.665097122341!2d3.5309054459834335!3d6.4415181769690815!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103bf6f92da0f59d%3A0xc020080e1f213866!2sLekki%20Conservation%20Centre!5e1!3m2!1sen!2sng!4v1779968984481!5m2!1sen!2sng"
+                class="w-full h-full border-0 opacity-40 hover:opacity-60 transition duration-700 grayscale invert contrast-125 brightness-75"
+                allowfullscreen="" loading="lazy">
+            </iframe>
+            <!-- Subtle overlay indicator -->
+            <div
+                class="absolute bottom-4 left-6 bg-black/60 backdrop-blur-md border border-white/10 px-4 py-2 pointer-events-none">
+                <p class="text-[9px] text-luxury-copper uppercase tracking-widest">AWH Showroom / By Appointment Only
+                </p>
+            </div>
+        </section>
+
+
+
+
+    </section>
     <!-- FOOTER -->
     <footer class="bg-zinc-950 border-t border-white/5 pt-20 pb-10">
         <div class="container mx-auto px-8">
@@ -152,7 +173,7 @@
                 <div class="space-y-5">
                     <div class="text-2xl font-bold tracking-widest serif uppercase">A<span
                             class="text-luxury-copper">w</span>H</div>
-                    <p class="text-gray-500 text-sm leading-relaxed serif">
+                    <p class="text-gray-500 text-sm leading-relaxed serif ">
                         Curating the world's finest timepieces for discerning collectors since 2018.
                     </p>
                     <div class="space-y-3 text-xs text-gray-400">
@@ -168,18 +189,20 @@
                 <div class="space-y-5">
                     <h4 class="text-xs uppercase tracking-[0.3em] font-bold text-white">Support</h4>
                     <ul class="space-y-4 text-xs text-gray-500 uppercase tracking-widest">
-                        <li><a href="#" class="hover:text-luxury-copper transition">F.A.Q</a></li>
-                        <li><a href="#" class="hover:text-luxury-copper transition">Terms & Conditions</a></li>
+                        <li><a href="authentication.html" class="hover:text-luxury-copper transition">F.A.Q</a></li>
+                        <li><a href="terms.html" class="hover:text-luxury-copper transition">Terms & Conditions</a></li>
                         <li><a href="#" class="hover:text-luxury-copper transition">Contact Us</a></li>
-                        <li><a href="#" class="hover:text-luxury-copper transition">Authentication Process</a></li>
+                        <li><a href="authentication.html" class="hover:text-luxury-copper transition">Authentication
+                                Process</a></li>
                     </ul>
                 </div>
                 <div class="space-y-5">
-                  <h4 class="text-xs uppercase tracking-[0.3em] font-bold text-white">Concierge</h4>
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-bold text-white">Concierge</h4>
                     <ul class="space-y-4 text-xs text-gray-500 uppercase tracking-widest">
                         <li><a href="https://wa.me/2348109948221?text=Hello%20AWH%2C%20I'd%20like%20to%20book%20a%20private%20viewing%20for%20a%20timepiece."
                                 class="hover:text-luxury-copper transition">Private Viewing</a></li>
-                        <li><a href="https://wa.me/2348109948221?text=Hello%20AWH%2C%20I%20want%20to%20sell%20my%20watch.%20Can%20you%20provide%20details%20on%20the%20process%3F" class="hover:text-luxury-copper transition">Sell Your Watch</a></li>
+                        <li><a href="https://wa.me/2348109948221?text=Hello%20AWH%2C%20I%20want%20to%20sell%20my%20watch.%20Can%20you%20provide%20details%20on%20the%20process%3F"
+                                class="hover:text-luxury-copper transition">Sell Your Watch</a></li>
                         <li>
                             <a href="https://wa.me/2348109948221?text=Hello%20AWH%2C%20I%20am%20looking%20to%20source%20a%20specific%20timepiece.%20Can%20you%20help%20me%20find%20one%3F"
                                 class="hover:text-luxury-copper transition">
@@ -219,7 +242,8 @@
                 </div>
 
                 <div class="text-[9px] text-gray-600 uppercase tracking-[0.4em] text-center leading-loose">
-                    <p>&copy; <span id="current-year"></span> AWH Curated Timepieces <span class="mx-2">—</span> All Rights Reserved.</p>
+                    <p>&copy; <span id="current-year"></span> AWH Curated Timepieces <span class="mx-2">—</span> All
+                        Rights Reserved.</p>
                 </div>
             </div>
 
@@ -243,5 +267,7 @@
     <div id="cursor-dot"></div>
     <div id="cursor-ring"></div>
     <script src="script.js"></script>
+
 </body>
+
 </html>

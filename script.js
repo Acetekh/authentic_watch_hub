@@ -137,10 +137,10 @@ function handleAccordion(element) {
     const clickedAnswer = element.querySelector('.faq-answer');
     const clickedIcon = element.querySelector('i');
 
-    // 1. Check if the clicked one is already open
+   
     const isOpen = clickedAnswer.style.maxHeight && clickedAnswer.style.maxHeight !== '0px';
 
-    // 2. Close ALL other items
+    
     allItems.forEach(item => {
         const answer = item.querySelector('.faq-answer');
         const icon = item.querySelector('i');
@@ -150,7 +150,7 @@ function handleAccordion(element) {
         icon.classList.replace('fa-minus', 'fa-plus');
     });
 
-    // 3. If the clicked one wasn't open, open it now
+    //
     if (!isOpen) {
         clickedAnswer.style.maxHeight = clickedAnswer.scrollHeight + "px";
         clickedIcon.style.transform = 'rotate(180deg)';
@@ -158,31 +158,64 @@ function handleAccordion(element) {
     }
 }
 // 1. THE SHOP LIST (The "Menu")
-// IMPORTANT: The 'id' here MUST match the 'key' in your product-details.html
+
 const watches = [
     {
-        id: "rolex-submariner", 
+        id: "rolex oyster perpetual day-date", 
         brand: "rolex",
-        name: "Submariner Date",
+        name: "rolex oyster Day-date",
         price: "$ 14,800.00",
-        img: "https://images.pexels.com/photos/11544157/pexels-photo-11544157.jpeg",
+        img: "https://i.pinimg.com/1200x/3b/81/90/3b8190f3f570458b143642b3577a5fe9.jpg",
+        size: "41mm"
+    },
+     {
+        id: "Hublot Big Bang Unico",
+        brand: "hublot",
+        name: "Big Bang Unico",
+        price: "$ 13,000.00",
+        img: "https://i.pinimg.com/1200x/bb/ac/94/bbac94a09c743c043ef1351a821a86ba.jpg",
         size: "41mm"
     },
     {
-        id: "cartier-santos",
+        id: "rolex oyster perpetual", 
+        brand: "rolex",
+        name: "Oyster Perpetual Datejust",
+        price: "$ 14,800.00",
+        img: "https://i.pinimg.com/1200x/fe/81/5a/fe815ae64a150a717fd0a85fbc7b3027.jpg",
+        size: "41mm"
+    },
+    {
+        id: "cartier santos",
         brand: "cartier",
         name: "Santos de Cartier",
         price: "$ 7,200.00",
-        img: "https://images.pexels.com/photos/14525785/pexels-photo-14525785.jpeg",
+        img: "https://i.pinimg.com/1200x/d7/ed/bd/d7edbdfc2e7ea51f13b6cbf081d4670e.jpg",
         size: "39.8mm"
     },
+     {
+        id: "Santos de Cartier Hand-Wound Skeleton",
+        brand: "cartier",
+        name: "Santos de Cartier Skeleton",
+        price: "$ 70,000.00",
+        img: "https://i.pinimg.com/1200x/ec/e7/eb/ece7eb97db72b8463eed3d7fc19f122e.jpg",
+        size: "39.8mm"
+    },
+    
     {
-        id: "hublot-big-bang",
+        id: "Hublot Classic Fusion Black Magic",
         brand: "hublot",
-        name: "Nautilus 5711/1A",
+        name: "Hublot Classic Fusion Black Magic",
         price: "$ 95,000.00",
-        img: "https://images.pexels.com/photos/14525785/pexels-photo-14525785.jpeg",
+        img: "https://i.pinimg.com/736x/2b/7d/76/2b7d76a69f7ccd1f819833a3cfbd3fad.jpg",
         size: "40mm"
+    },
+     {
+        id: "Cartier Skeleton",
+        brand: "cartier",
+        name: "Cartier Skeleton Green",
+        price: "$ 7,200.00",
+        img: "https://i.pinimg.com/736x/6b/c8/b9/6bc8b9a2cbbddd1da3f2a604dc2300d6.jpg",
+        size: "39.8mm"
     },
     {
         id: "hublot-big-bang",
@@ -191,7 +224,19 @@ const watches = [
         price: "$ 13,000.00",
         img: "https://asset.bucherer.com/image/upload/c_limit,f_auto,w_1280/Assets/Watches/LVMH/Hublot/Manual/1332-237-5_FP.png",
         size: "41mm"
+
+    },
+   ,
+     {
+        id: "rolex Oystersteel", 
+        brand: "rolex",
+        name: "Oystersteel Lady-Datejus",
+        price: "$ 43,800.00",
+        img: "https://i.pinimg.com/1200x/30/23/e2/3023e2c5e12a5563a7b620a601c524ce.jpg",
+        size: "41mm"
     }
+    
+
 ];
 
 // 2. THE RENDER FUNCTION (The "Waiter")
@@ -207,13 +252,14 @@ function renderShop(filter = 'all') {
     filtered.forEach(watch => {
         grid.innerHTML += `
             <div class="group cursor-pointer" onclick="window.location.href='product-details.html?watch=${watch.id}'">
+                <!-- Kept your exact classes, just added square brackets around [4/5] so Tailwind reads it -->
                 <div class="relative aspect-4/5 bg-zinc-900 overflow-hidden mb-6 border border-white/5">
                     <img src="${watch.img}" class="w-full h-full object-cover group-hover:scale-110 transition duration-1000">
                     <div class="absolute inset-0 bg-black/10 group-hover:bg-transparent transition duration-500"></div>
                 </div>
                 <div class="text-center px-2">
-                    <p class="text-luxury-copper uppercase tracking-[0.3em] text-[9px] mb-2">${watch.brand}</p>
-                    <h3 class="serif text-xl mb-1">${watch.name}</h3>
+                    <p class="text-luxury-copper uppercase tracking-[0.3em] text-[10px] mb-2">${watch.brand}</p>
+                    <h3 class="serif text-1xl mb-1">${watch.name}</h3>
                     <p class="text-white font-light tracking-widest text-sm">${watch.price}</p>
                 </div>
             </div>

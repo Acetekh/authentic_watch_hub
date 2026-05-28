@@ -77,16 +77,31 @@ body {
             transform: translateY(0);
         }
 
-        /* Mobile menu */
-        #mobile-nav {
-            max-height: 0;
-            overflow: hidden;
-            transition: max-height 0.35s ease;
-        }
+       /* Mobile menu overlay styling */
+#mobile-nav {
+    position: fixed;
+    top: 80px; /* Adjust this to match the exact height of your main navbar */
+    left: 0;
+    width: 100%;
+    height: calc(100vh - 80px); /* Fills the rest of the current screen view */
+    background-color: rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+    
+    /* Smooth slide down animation */
+    transform: translateY(-100%);
+    opacity: 0;
+    pointer-events: none;
+    transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
+    z-index: 40;
+}
 
-        #mobile-nav.open {
-            max-height: 300px;
-        }
+/* When the menu has the .open class */
+#mobile-nav.open {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: auto;
+}
 
         #luxuryScrollTop {
             position: fixed;

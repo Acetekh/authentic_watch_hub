@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWH | Curated Timepieces</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'luxury-black': '#0F1113',
+                        'luxury-cream': '#F4F1EA',
+                        'luxury-copper': '#C18A63',
+                    },
+                    fontFamily: {
+                        'serif': ['"Instrument Serif"', 'serif'],
+                        'sans': ['Roboto', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        'luxury': '0.2em',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- NAV -->
+    <nav
+        class="flex hero justify-between items-center px-8 py-5 sticky top-0 bg-black/85 backdrop-blur-md z-50 border-b border-white/10">
+        <div class="text-2xl font-bold tracking-widest serif uppercase">A<span class="text-luxury-copper">w</span>H
+        </div>
+        <div class="hidden md:flex gap-10 text-xs uppercase tracking-widest text-gray-400">
+            <a href="index.html" class="hover:text-luxury-copper transition">Home</a>
+            <a href="about.html" class="hover:text-luxury-copper transition">About</a>
+            <a href="shop.html" class="hover:text-luxury-copper transition">Shop</a>
+            <a href="gallery.html" class="hover:text-luxury-copper transition">Gallery</a>
+            <a href="contactus.html" class="hover:text-luxury-copper transition">Contact</a>
+
+
+        </div>
+
+        <div class="flex items-center space-x-4">
+            <i
+                class="fa-solid fa-magnifying-glass text-sm text-gray-400 hover:text-white cursor-pointer transition"></i>
+            <button onclick="document.getElementById('enquire-modal').classList.remove('hidden')"
+                class="bg-luxury-copper rounded-full text-white px-5 py-2 text-xs font-bold uppercase tracking-widest hover:bg-luxury-cream hover:text-black transition duration-300">
+                Enquire
+            </button>
+            <button id="mobile-toggle" class="md:hidden text-white p-1">
+                <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+
+    <div id="mobile-nav" class="md:hidden bg-black/90 border-b border-white/10 px-8">
+        <div class="py-5 flex flex-col gap-5 text-xs uppercase tracking-widest text-gray-400">
+            <a href="index.html" class="mobile-link hover:text-luxury-copper transition">Home</a>
+            <a href="about.html" class="mobile-link hover:text-luxury-copper transition">About</a>
+            <a href="shop.html" class="mobile-link hover:text-luxury-copper transition">Shop</a>
+            <a href="gallery.html" class="mobile-link hover:text-luxury-copper transition">Gallery</a>
+            <a href="contactus.html" class="mobile-link hover:text-luxury-copper transition">Contact</a>
+
+        </div>
+    </div>
+
+  <!-- 1. MINIMALIST SPATIAL HERO -->
+<section class="relative min-h-[90vh] w-full flex items-center bg-black overflow-hidden border-b border-white/[0.05]">
+    <!-- Deep Ambient Glow Layer -->
+    <div class="absolute top-1/4 left-1/4 -translate-x-1/2 -translate-y-1/2 w-96 h-96 bg-luxury-copper/5 rounded-full blur-[120px] pointer-events-none"></div>
+
+    <div class="container mx-auto px-6 max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-16 items-center relative z-10 py-24">
+        
+        <!-- Left Column: Bold Atmospheric Close-up (Takes 5 slots) -->
+        <div class="lg:col-span-5 relative aspect-[4/5] w-full max-w-md mx-auto overflow-hidden bg-zinc-950 border border-white/[0.08] rounded-2xl group shadow-2xl">
+            <img src="https://images.unsplash.com/photo-1547996160-81dfa63595aa?q=80&w=1000&auto=format&fit=crop" 
+                 class="w-full h-full object-cover grayscale contrast-125 brightness-[0.6] group-hover:scale-105 transition duration-[1200ms] ease-out">
+            <!-- Vignette Overlay -->
+            <div class="absolute inset-0 bg-gradient-to-t from-black via-black/20 to-transparent opacity-80"></div>
+        </div>
+
+        <!-- Right Column: Minimalist Statement Typography (Takes 7 slots) -->
+        <div class="lg:col-span-7 space-y-8 lg:pl-6">
+            <div class="flex items-center gap-3">
+                <span class="px-3 py-1 bg-white/[0.03] border border-white/[0.08] rounded-full text-[9px] tracking-[0.25em] uppercase text-luxury-copper font-medium">Curation</span>
+                <div class="w-1.5 h-1.5 rounded-full bg-white/20"></div>
+                <span class="px-3 py-1 bg-white/[0.03] border border-white/[0.08] rounded-full text-[9px] tracking-[0.25em] uppercase text-white/40 font-medium">Heritage</span>
+            </div>
+            
+            <h1 class="text-5xl md:text-7xl font-bold text-white tracking-tighter uppercase leading-[0.9] font-sans">
+                The New <br><span class="text-transparent bg-clip-text bg-gradient-to-r from-white via-white to-neutral-500">Frontier</span> <br>of Horology
+            </h1>
+            
+            <p class="text-neutral-400 text-sm max-w-md leading-relaxed font-light">
+                Step into a modern, uncompromised vault where the boundaries between fine investment assets and elite curation disappear. This is the next era of luxury procurement.
+            </p>
+            
+            <div class="flex items-center gap-8 pt-4">
+                <button class="bg-white text-black font-semibold uppercase tracking-widest text-[10px] px-10 py-4 rounded-xl hover:bg-luxury-copper hover:text-black transition-all duration-300 shadow-xl hover:-translate-y-0.5">
+                    Explore Collections
+                </button>
+                <span class="text-[10px] uppercase tracking-[0.2em] text-neutral-400 border-b border-neutral-800 pb-1 cursor-pointer hover:text-luxury-copper hover:border-luxury-copper transition-all duration-300">
+                    Our Mandate &rarr;
+                </span>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- 2. TRIPLE VAULT SERVICES ROW (The 3-Card Structure) -->
+<section class="py-32 bg-black border-b border-white/[0.05] relative">
+    <div class="absolute bottom-1/3 right-1/4 w-[500px] h-[500px] bg-luxury-copper/[0.02] rounded-full blur-[150px] pointer-events-none"></div>
+
+    <div class="container mx-auto px-6 max-w-6xl space-y-20">
+        
+        <!-- Header Zone with Navigation Arrows Mock -->
+        <div class="flex justify-between items-end border-b border-white/[0.05] pb-8">
+            <div class="space-y-3">
+                <p class="text-luxury-copper text-[10px] uppercase tracking-[0.4em] font-semibold">Services</p>
+                <h2 class="text-4xl font-bold text-white tracking-tight uppercase font-sans">Our Ecosystem</h2>
+            </div>
+            <!-- Premium Slider Controls -->
+            <div class="flex gap-3">
+                <button class="w-12 h-12 rounded-xl border border-white/[0.08] bg-white/[0.02] flex items-center justify-center text-white/40 hover:border-white/40 hover:text-white transition-all duration-300 active:scale-95">&larr;</button>
+                <button class="w-12 h-12 rounded-xl border border-white/[0.08] bg-white/[0.02] flex items-center justify-center text-white/40 hover:border-white/40 hover:text-white transition-all duration-300 active:scale-95">&rarr;</button>
+            </div>
+        </div>
+
+        <!-- The 3 Premium Cards -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            
+            <!-- Card 1 -->
+            <div class="bg-gradient-to-b from-white/[0.03] to-transparent border border-white/[0.05] hover:border-luxury-copper/30 p-10 rounded-2xl space-y-8 group transition-all duration-500 hover:-translate-y-1 relative overflow-hidden backdrop-blur-3xl">
+                <div class="w-14 h-14 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-luxury-copper text-xl group-hover:bg-luxury-copper group-hover:text-black group-hover:border-luxury-copper transition-all duration-500 shadow-lg">
+                    ✦
+                </div>
+                <div class="space-y-3">
+                    <h3 class="text-xl font-medium text-white tracking-wide font-sans">Private Sourcing</h3>
+                    <p class="text-neutral-500 text-xs leading-relaxed font-light">Access to restricted allocations and off-market reference models directly from global collectors.</p>
+                </div>
+                <div class="pt-2">
+                    <span class="text-[10px] uppercase tracking-widest text-neutral-500 group-hover:text-luxury-copper transition duration-300 cursor-pointer flex items-center gap-2">
+                        Learn More <span class="transform group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-gradient-to-b from-white/[0.03] to-transparent border border-white/[0.05] hover:border-luxury-copper/30 p-10 rounded-2xl space-y-8 group transition-all duration-500 hover:-translate-y-1 relative overflow-hidden backdrop-blur-3xl">
+                <div class="w-14 h-14 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-luxury-copper text-xl group-hover:bg-luxury-copper group-hover:text-black group-hover:border-luxury-copper transition-all duration-500 shadow-lg">
+                    ⎔
+                </div>
+                <div class="space-y-3">
+                    <h3 class="text-xl font-medium text-white tracking-wide font-sans">Asset Evaluation</h3>
+                    <p class="text-neutral-500 text-xs leading-relaxed font-light">Comprehensive mechanical appraisal, component grading, and historical valuation metrics charting.</p>
+                </div>
+                <div class="pt-2">
+                    <span class="text-[10px] uppercase tracking-widest text-neutral-500 group-hover:text-luxury-copper transition duration-300 cursor-pointer flex items-center gap-2">
+                        Learn More <span class="transform group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+                    </span>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-gradient-to-b from-white/[0.03] to-transparent border border-white/[0.05] hover:border-luxury-copper/30 p-10 rounded-2xl space-y-8 group transition-all duration-500 hover:-translate-y-1 relative overflow-hidden backdrop-blur-3xl">
+                <div class="w-14 h-14 rounded-xl bg-white/[0.03] border border-white/[0.08] flex items-center justify-center text-luxury-copper text-xl group-hover:bg-luxury-copper group-hover:text-black group-hover:border-luxury-copper transition-all duration-500 shadow-lg">
+                    ⚚
+                </div>
+                <div class="space-y-3">
+                    <h3 class="text-xl font-medium text-white tracking-wide font-sans">Vault Custody</h3>
+                    <p class="text-neutral-500 text-xs leading-relaxed font-light">Secure, insured physical preservation environments with multi-point authentication parameters.</p>
+                </div>
+                <div class="pt-2">
+                    <span class="text-[10px] uppercase tracking-widest text-neutral-500 group-hover:text-luxury-copper transition duration-300 cursor-pointer flex items-center gap-2">
+                        Learn More <span class="transform group-hover:translate-x-1 transition-transform duration-300">&rarr;</span>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</section>
+
+<!-- 3. TRUSTED INSIGHTS SECTION (The Split Testimonial Stack) -->
+<section class="py-32 bg-[#040404] relative">
+    <div class="container mx-auto px-6 max-w-6xl grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+        
+        <!-- Left Side: Massive Headers (Takes 5 slots) -->
+        <div class="lg:col-span-5 space-y-8 lg:sticky lg:top-32">
+            <div class="space-y-3">
+                <p class="text-luxury-copper text-[10px] uppercase tracking-[0.4em] font-semibold">Endorsements</p>
+                <h2 class="text-4xl md:text-5xl font-bold text-white tracking-tighter uppercase leading-[0.95] font-sans">
+                    Voices of <br>Collectors
+                </h2>
+            </div>
+            <div class="w-16 h-[2px] bg-luxury-copper"></div>
+            <p class="text-neutral-500 text-xs leading-relaxed max-w-sm font-light">
+                Read firsthand accounts from experienced investors and enthusiasts who rely on our verification pipelines to scale their private collections securely.
+            </p>
+        </div>
+
+        <!-- Right Side: Stacked Premium Testimonial Blocks (Takes 7 slots) -->
+        <div class="lg:col-span-7 space-y-6">
+            
+            <!-- Block 1 -->
+            <div class="bg-gradient-to-r from-white/[0.01] to-white/[0.03] border border-white/[0.04] p-8 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 hover:border-white/[0.1] hover:bg-white/[0.04] transition-all duration-300 group">
+                <div class="space-y-3 order-2 sm:order-1">
+                    <p class="text-neutral-300 text-xs font-light leading-relaxed">"AWH completely transformed the way I procure rare assets. Their multi-point caliber authentication gives absolute peace of mind."</p>
+                    <h4 class="text-white font-semibold text-[10px] tracking-widest uppercase font-sans group-hover:text-luxury-copper transition duration-300">James Rizaki</h4>
+                </div>
+                <div class="w-14 h-14 rounded-full bg-zinc-900 border border-white/[0.08] shrink-0 overflow-hidden order-1 sm:order-2 shadow-inner ring-4 ring-white/[0.01]">
+                    <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=200&auto=format&fit=crop" class="w-full h-full object-cover grayscale contrast-110">
+                </div>
+            </div>
+
+            <!-- Block 2 -->
+            <div class="bg-gradient-to-r from-white/[0.01] to-white/[0.03] border border-white/[0.04] p-8 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 hover:border-white/[0.1] hover:bg-white/[0.04] transition-all duration-300 group">
+                <div class="space-y-3 order-2 sm:order-1">
+                    <p class="text-neutral-300 text-xs font-light leading-relaxed">"Their global procurement pipeline sourced an off-market reference code within weeks that I had been tracking for years."</p>
+                    <h4 class="text-white font-semibold text-[10px] tracking-widest uppercase font-sans group-hover:text-luxury-copper transition duration-300">Samantha Leonardo</h4>
+                </div>
+                <div class="w-14 h-14 rounded-full bg-zinc-900 border border-white/[0.08] shrink-0 overflow-hidden order-1 sm:order-2 shadow-inner ring-4 ring-white/[0.01]">
+                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=200&auto=format&fit=crop" class="w-full h-full object-cover grayscale contrast-110">
+                </div>
+            </div>
+
+            <!-- Block 3 -->
+            <div class="bg-gradient-to-r from-white/[0.01] to-white/[0.03] border border-white/[0.04] p-8 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 hover:border-white/[0.1] hover:bg-white/[0.04] transition-all duration-300 group">
+                <div class="space-y-3 order-2 sm:order-1">
+                    <p class="text-neutral-300 text-xs font-light leading-relaxed">"The attention to detail in their component grading reports sets a whole new premium standard for watch investment brokerage."</p>
+                    <h4 class="text-white font-semibold text-[10px] tracking-widest uppercase font-sans group-hover:text-luxury-copper transition duration-300">Mark Trevor</h4>
+                </div>
+                <div class="w-14 h-14 rounded-full bg-zinc-900 border border-white/[0.08] shrink-0 overflow-hidden order-1 sm:order-2 shadow-inner ring-4 ring-white/[0.01]">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" class="w-full h-full object-cover grayscale contrast-110">
+                </div>
+            </div>
+             <div class="bg-gradient-to-r from-white/[0.01] to-white/[0.03] border border-white/[0.04] p-8 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 hover:border-white/[0.1] hover:bg-white/[0.04] transition-all duration-300 group">
+                <div class="space-y-3 order-2 sm:order-1">
+                    <p class="text-neutral-300 text-xs font-light leading-relaxed">"The attention to detail in their component grading reports sets a whole new premium standard for watch investment brokerage."</p>
+                    <h4 class="text-white font-semibold text-[10px] tracking-widest uppercase font-sans group-hover:text-luxury-copper transition duration-300">Mark Trevor</h4>
+                </div>
+                <div class="w-14 h-14 rounded-full bg-zinc-900 border border-white/[0.08] shrink-0 overflow-hidden order-1 sm:order-2 shadow-inner ring-4 ring-white/[0.01]">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" class="w-full h-full object-cover grayscale contrast-110">
+                </div>
+            </div> <div class="bg-gradient-to-r from-white/[0.01] to-white/[0.03] border border-white/[0.04] p-8 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 hover:border-white/[0.1] hover:bg-white/[0.04] transition-all duration-300 group">
+                <div class="space-y-3 order-2 sm:order-1">
+                    <p class="text-neutral-300 text-xs font-light leading-relaxed">"The attention to detail in their component grading reports sets a whole new premium standard for watch investment brokerage."</p>
+                    <h4 class="text-white font-semibold text-[10px] tracking-widest uppercase font-sans group-hover:text-luxury-copper transition duration-300">Mark Trevor</h4>
+                </div>
+                <div class="w-14 h-14 rounded-full bg-zinc-900 border border-white/[0.08] shrink-0 overflow-hidden order-1 sm:order-2 shadow-inner ring-4 ring-white/[0.01]">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" class="w-full h-full object-cover grayscale contrast-110">
+                </div>
+            </div> <div class="bg-gradient-to-r from-white/[0.01] to-white/[0.03] border border-white/[0.04] p-8 rounded-2xl flex flex-col sm:flex-row items-start sm:items-center justify-between gap-6 hover:border-white/[0.1] hover:bg-white/[0.04] transition-all duration-300 group">
+                <div class="space-y-3 order-2 sm:order-1">
+                    <p class="text-neutral-300 text-xs font-light leading-relaxed">"The attention to detail in their component grading reports sets a whole new premium standard for watch investment brokerage."</p>
+                    <h4 class="text-white font-semibold text-[10px] tracking-widest uppercase font-sans group-hover:text-luxury-copper transition duration-300">Mark Trevor</h4>
+                </div>
+                <div class="w-14 h-14 rounded-full bg-zinc-900 border border-white/[0.08] shrink-0 overflow-hidden order-1 sm:order-2 shadow-inner ring-4 ring-white/[0.01]">
+                    <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=200&auto=format&fit=crop" class="w-full h-full object-cover grayscale contrast-110">
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+    <!-- FOOTER -->
+    <footer class="bg-zinc-950 border-t border-white/5 pt-20 pb-10">
+        <div class="container mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-5">
+                    <div class="text-2xl font-bold tracking-widest serif uppercase">A<span
+                            class="text-luxury-copper">w</span>H</div>
+                    <p class="text-gray-500 text-sm leading-relaxed serif ">
+                        Curating the world's finest timepieces for discerning collectors since 2018.
+                    </p>
+                    <div class="space-y-3 text-xs text-gray-400">
+                        <div class="flex items-center gap-3"><i
+                                class="fa-solid fa-location-dot text-luxury-copper"></i><span>Victoria Island,
+                                Lagos</span></div>
+                        <div class="flex items-center gap-3"><i
+                                class="fa-solid fa-phone text-luxury-copper"></i><span>+234 800 000 0000</span></div>
+                        <div class="flex items-center gap-3"><i
+                                class="fa-solid fa-envelope text-luxury-copper"></i><span>hello@awh.ng</span></div>
+                    </div>
+                </div>
+                <div class="space-y-5">
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-bold text-white">Support</h4>
+                    <ul class="space-y-4 text-xs text-gray-500 uppercase tracking-widest">
+                        <li><a href="authentication.html" class="hover:text-luxury-copper transition">F.A.Q</a></li>
+                        <li><a href="terms.html" class="hover:text-luxury-copper transition">Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:text-luxury-copper transition">Contact Us</a></li>
+                        <li><a href="authentication.html" class="hover:text-luxury-copper transition">Authentication
+                                Process</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-5">
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-bold text-white">Concierge</h4>
+                    <ul class="space-y-4 text-xs text-gray-500 uppercase tracking-widest">
+                        <li><a href="https://wa.me/2348109948221?text=Hello%20AWH%2C%20I'd%20like%20to%20book%20a%20private%20viewing%20for%20a%20timepiece."
+                                class="hover:text-luxury-copper transition">Private Viewing</a></li>
+                        <li><a href="https://wa.me/2348109948221?text=Hello%20AWH%2C%20I%20want%20to%20sell%20my%20watch.%20Can%20you%20provide%20details%20on%20the%20process%3F"
+                                class="hover:text-luxury-copper transition">Sell Your Watch</a></li>
+                        <li>
+                            <a href="https://wa.me/2348109948221?text=Hello%20AWH%2C%20I%20am%20looking%20to%20source%20a%20specific%20timepiece.%20Can%20you%20help%20me%20find%20one%3F"
+                                class="hover:text-luxury-copper transition">
+                                Source a Timepiece
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-5">
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-bold text-luxury-copper">Newsletter</h4>
+                    <p class="text-gray-500 text-xs">Be first to know about new arrivals and exclusive drops.</p>
+                    <div class="relative">
+                        <input type="email" placeholder="Your email"
+                            class="w-full bg-transparent border-b border-white/10 py-3 text-sm focus:border-luxury-copper outline-none transition placeholder-gray-600">
+                        <button
+                            class="absolute right-0 top-3 text-luxury-copper hover:text-luxury-copper transition duration-300"><i
+                                class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="pt-10 border-t border-white/5 flex flex-col items-center">
+
+                <div class="grid grid-cols-4 gap-7 text-gray-500 text-sm mb-8">
+                    <a href="#" class="hover:text-white transition flex justify-center items-center">
+                        <i class="fa-brands fa-instagram"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition flex justify-center items-center">
+                        <i class="fa-brands fa-twitter"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition flex justify-center items-center">
+                        <i class="fa-brands fa-facebook-f"></i>
+                    </a>
+                    <a href="#" class="hover:text-white transition flex justify-center items-center">
+                        <i class="fa-brands fa-linkedin-in"></i>
+                    </a>
+                </div>
+
+                <div class="text-[9px] text-gray-600 uppercase tracking-[0.4em] text-center leading-loose">
+                    <p>&copy; <span id="current-year"></span> AWH Curated Timepieces <span class="mx-2">—</span> All
+                        Rights Reserved.</p>
+                </div>
+            </div>
+
+    </footer>
+
+    <a href="https://wa.me/2348109948221?text=Hello%20AWH%2C%20I%20am%20interested%20in%20one%20of%20your%20timepieces.%20Can%20you%20provide%20more%20details%3F"
+        class="fixed bottom-8 right-8 z-50 bg-[#25D366] p-4 rounded-full shadow-2xl hover:scale-110 hover:bg-[#1da851] transition duration-300">
+        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+    </a>
+    <button id="luxuryScrollTop"
+        class="scroll-btn-hidden mr-2 z-50 bg-luxury-copper p-4 rounded-full transition duration-300">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C18A63" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </button>
+    <!-- cursor ring animation -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+    <script src="script.js"></script>
+</body>
+
+</html>
