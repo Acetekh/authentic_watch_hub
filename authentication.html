@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AWH | Curated Timepieces</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+    <!-- Roboto font -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&family=Playfair+Display:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'luxury-black': '#0F1113',
+                        'luxury-cream': '#F4F1EA',
+                        'luxury-copper': '#C18A63',
+                    },
+                    fontFamily: {
+                        'serif': ['"Instrument Serif"', 'serif'],
+                        'sans': ['Roboto', 'sans-serif'],
+                    },
+                    letterSpacing: {
+                        'luxury': '0.2em',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body>
+    
+
+        
+    <!-- NAV -->
+    <nav
+        class="flex hero justify-between items-center px-8 py-5 sticky top-0 bg-black/85 backdrop-blur-md z-50 border-b border-white/10">
+        <div class="text-2xl font-bold tracking-widest serif uppercase">A<span class="text-luxury-copper">w</span>H
+        </div>
+        <div class="hidden md:flex gap-10 text-xs uppercase tracking-widest text-gray-400">
+           <a href="index.html" class="hover:text-luxury-copper transition">Home</a>
+            <a href="shop.html" class="hover:text-luxury-copper transition">Shop</a>
+            <a href="gallery.html" class="hover:text-luxury-copper transition">Gallery</a>
+            <a href="about.html" class="hover:text-luxury-cream transition">About</a>
+        </div>
+        <div class="flex items-center space-x-4">
+            <i
+                class="fa-solid fa-magnifying-glass text-sm text-gray-400 hover:text-white cursor-pointer transition"></i>
+            <button onclick="document.getElementById('enquire-modal').classList.remove('hidden')"
+                class="bg-luxury-copper rounded-full text-white px-5 py-2 text-xs font-bold uppercase tracking-widest hover:bg-luxury-cream hover:text-black transition duration-300">
+                Enquire
+            </button>
+            <button id="mobile-toggle" class="md:hidden text-white p-1">
+                <svg id="icon-open" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5"
+                        d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+                <svg id="icon-close" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1.5" d="M6 18L18 6M6 6l12 12" />
+                </svg>
+            </button>
+        </div>
+    </nav>
+    
+    <div id="mobile-nav" class="md:hidden bg-black/90 border-b border-white/10 px-8">
+        <div class="py-5 flex flex-col gap-5 text-xs uppercase tracking-widest text-gray-400">
+            <a href="#collection" class="mobile-link hover:text-luxury-copper transition">Collections</a>
+            <a href="#collection" class="mobile-link hover:text-luxury-copper transition">New Arrivals</a>
+            <a href="#about" class="mobile-link hover:text-luxury-copper transition">About</a>
+        </div>
+    </div>
+
+    <!-- HERO -->
+    <header class="relative h-[85vh] hero flex items-center justify-center overflow-hidden">
+        <div class="absolute inset-0 z-0">
+            <img src="https://wallpapercave.com/wp/wp15444648.jpg"
+                class="w-full h-full object-cover " alt="Luxury Watch">
+                
+            <div class="absolute inset-0 gradient-overlay bg-gray-900/30"></div>
+        </div>
+        <div class="relative z-10 text-center px-4">
+            <span class="text-luxury-copper uppercase tracking-[0.3em] text-xs font-bold mb-5 block">Exclusively
+                Handcrafted</span>
+            <h1 class="text-5xl md:text-8xl serif mb-6 leading-tight">Ele<span class="text-luxury-copper">v</span>ate
+                Your Tim<span class="text-luxury-copper">e.</span></h1>
+            <p class="max-w-md mx-auto text-gray-400 text-sm leading-relaxed mb-8">
+                Experience the pinnacle of horology with our curated collection of authenticated luxury timepieces.
+            </p>
+          <div class="flex flex-col md:flex-row justify-center items-center gap-4 md:gap-6 mt-12">
+
+    <a href="#collection"
+        class="w-full backdrop-blur-sm md:w-auto border border-white/20 px-10 py-4 uppercase text-[10px] tracking-[0.2em] hover:bg-white hover:text-black transition duration-500 text-center">
+        Explore Collection
+    </a>
+
+    <a href="#collection"
+        class="w-full md:w-auto border hover:backdrop-blur-sm border-luxury-copper px-10 py-4 uppercase text-[10px] tracking-[0.2em] bg-luxury-copper text-white hover:bg-transparent hover:text-luxury-copper transition duration-500 text-center">
+        Contact Specialist
+    </a>
+    
+</div>
+        </div>
+    </header>
+
+
+  
+
+<section class="py-24 container mx-auto px-8 reveal">
+    <div class="max-w-3xl mx-auto text-center mb-20">
+        <h1 class="serif text-5xl mb-6">Verified Pedigree</h1>
+        <div class="h-0.5 w-20 bg-luxury-copper mx-auto mb-3"></div>
+        <p class="text-gray-400 leading-relaxed serif">Our commitment to precision and provenance</p>
+    </div>
+    <div class="grid md:grid-cols-3 gap-12">
+        <div class="group">
+            <div class="relative h-64 mb-8 overflow-hidden border border-white/5 bg-zinc-900">
+                <img src="https://luxurywatchgroup.co.uk/wp-content/uploads/2024/04/rolex_box.jpeg" class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition duration-700" alt="Provenance">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-[120px] text-white/10 serif opacity-20">01</span>
+                </div>
+            </div>
+            <h3 class="uppercase tracking-[0.3em] text-[10px] text-luxury-copper mb-4 text-center">Provenance Check</h3>
+            <p class="text-gray-500 text-xs leading-relaxed text-center px-4">We trace the history of the piece, ensuring original box, papers, and legal origin.</p>
+        </div>
+
+        <div class="group">
+            <div class="relative h-64 mb-8 overflow-hidden border border-white/5 bg-zinc-900">
+                <img src="https://watchessy.com/wp-content/uploads/2024/07/What-is-swiss-movement-768x768.jpg" class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition duration-700" alt="Internal Audit">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class=" text-white/10 serif text-[120px] opacity-20">02</span>
+                </div>
+            </div>
+            <h3 class="uppercase tracking-[0.3em] text-[10px] text-luxury-copper mb-4 text-center">Internal Audit</h3>
+            <p class="text-gray-500 text-xs leading-relaxed text-center px-4">Master watchmakers inspect the movement for authentic parts and timing precision.</p>
+        </div>
+
+        <div class="group">
+            <div class="relative h-64 mb-8 overflow-hidden border border-white/5 bg-zinc-900">
+                <img src="https://cdn11.bigcommerce.com/s-iic0hc/images/stencil/1280x1280/products/49816/96821/horotec-polishing-cloth-17.095photo2__45394.1659986035.jpg?c=2" class="w-full h-full object-cover opacity-40 group-hover:scale-110 transition duration-700" alt="Final Certification">
+                <div class="absolute inset-0 flex items-center justify-center">
+                    <span class="text-white/10 serif text-[120px] opacity-20">03</span>
+                </div>
+            </div>
+            <h3 class="uppercase tracking-[0.3em] text-[10px] text-luxury-copper mb-4 text-center">Final Certification</h3>
+            <p class="text-gray-500 text-xs leading-relaxed text-center px-4">Only after passing all tests is the watch granted the AWH seal of authenticity.</p>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-20 bg-zinc-900/30 border-y border-white/5 reveal">
+    <div class="container mx-auto px-8">
+        <h2 class="text-luxury-copper serif text-center text-3xl mb-16">The AWH Guarantee</h2>
+        
+        <div class="grid md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+            <div class="border-l border-luxury-copper/30 pl-6">
+                <h4 class="text-white text-xs uppercase tracking-widest mb-3">100% Money Back</h4>
+                <p class="text-gray-500 text-[11px] leading-relaxed">If any timepiece is proven non-authentic by a verified manufacturer, we offer a full immediate refund.</p>
+            </div>
+            
+            <div class="border-l border-luxury-copper/30 pl-6">
+                <h4 class="text-white text-xs uppercase tracking-widest mb-3">1-Year Warranty</h4>
+                <p class="text-gray-500 text-[11px] leading-relaxed">Every watch is covered for 12 months against internal mechanical failure under normal usage.</p>
+            </div>
+
+            <div class="border-l border-luxury-copper/30 pl-6">
+                <h4 class="text-white text-xs uppercase tracking-widest mb-3">Secure Escrow</h4>
+                <p class="text-gray-500 text-[11px] leading-relaxed">Safe, insured delivery across Nigeria or secure physical pickup at our Lekki lounge.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+<section class="py-24 bg-black reveal">
+    <div class="container mx-auto px-8 max-w-4xl">
+         <h2 class="serif text-3xl text-center mb-5">Common Enquiries</h2>
+        <p class="serif text-gray-400 leading-relaxed text-center mb-16">Information regarding acquisition and private viewings</p>
+
+
+        
+        <div class="space-y-4">
+            <div class="faq-item border-b border-white/5 pb-4 group cursor-pointer" onclick="handleAccordion(this)">
+                <div class="flex justify-between items-center py-4">
+                    <h3 class="uppercase tracking-widest text-[11px] group-hover:text-luxury-copper transition duration-300">Do you accept trade-ins?</h3>
+                    <i class="fa-solid fa-plus text-[9px] text-gray-600 transition-transform duration-500"></i>
+                </div>
+                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                    <p class="text-gray-500 text-xs leading-relaxed max-w-2xl pb-6">
+                        Yes. We facilitate trade-ins for specific high-demand models. Our specialists perform a physical evaluation in Lekki to determine the trade-in value against your new acquisition.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item border-b border-white/5 pb-4 group cursor-pointer" onclick="handleAccordion(this)">
+                <div class="flex justify-between items-center py-4">
+                    <h3 class="uppercase tracking-widest text-[11px] group-hover:text-luxury-copper transition duration-300">How do I view a watch in person?</h3>
+                    <i class="fa-solid fa-plus text-[9px] text-gray-600 transition-transform duration-500"></i>
+                </div>
+                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                    <p class="text-gray-500 text-xs leading-relaxed max-w-2xl pb-6">
+                        Physical viewings are available by appointment only at our secure lounge in Lekki, Lagos. This ensures total privacy and security for both parties.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item border-b border-white/5 pb-4 group cursor-pointer" onclick="handleAccordion(this)">
+                <div class="flex justify-between items-center py-4">
+                    <h3 class="uppercase tracking-widest text-[11px] group-hover:text-luxury-copper transition duration-300">What payment methods are accepted?</h3>
+                    <i class="fa-solid fa-plus text-[9px] text-gray-600 transition-transform duration-500"></i>
+                </div>
+                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                    <p class="text-gray-500 text-xs leading-relaxed max-w-2xl pb-6">
+                        We accept secure bank transfers and certified checks. For international clients, we facilitate payments through secure escrow services to protect funds until delivery.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+    <!-- FOOTER -->
+    <footer class="bg-zinc-950 border-t border-white/5 pt-20 pb-10">
+        <div class="container mx-auto px-8">
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+                <div class="space-y-5">
+                    <div class="text-2xl font-bold tracking-widest serif uppercase">A<span
+                            class="text-luxury-copper">w</span>H</div>
+                    <p class="text-gray-500 text-sm leading-relaxed serif ">
+                        Curating the world's finest timepieces for discerning collectors since 2018.
+                    </p>
+                    <div class="space-y-3 text-xs text-gray-400">
+                        <div class="flex items-center gap-3"><i
+                                class="fa-solid fa-location-dot text-luxury-copper"></i><span>Victoria Island,
+                                Lagos</span></div>
+                        <div class="flex items-center gap-3"><i
+                                class="fa-solid fa-phone text-luxury-copper"></i><span>+234 800 000 0000</span></div>
+                        <div class="flex items-center gap-3"><i
+                                class="fa-solid fa-envelope text-luxury-copper"></i><span>hello@awh.ng</span></div>
+                    </div>
+                </div>
+                <div class="space-y-5">
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-bold text-white">Support</h4>
+                    <ul class="space-y-4 text-xs text-gray-500 uppercase tracking-widest">
+                        <li><a href="#" class="hover:text-luxury-copper transition">F.A.Q</a></li>
+                        <li><a href="#" class="hover:text-luxury-copper transition">Terms & Conditions</a></li>
+                        <li><a href="#" class="hover:text-luxury-copper transition">Contact Us</a></li>
+                        <li><a href="#" class="hover:text-luxury-copper transition">Authentication Process</a></li>
+                    </ul>
+                </div>
+                <div class="space-y-5">
+                   <h4 class="text-xs uppercase tracking-[0.3em] font-bold text-white">Concierge</h4>
+                    <ul class="space-y-4 text-xs text-gray-500 uppercase tracking-widest">
+                        <li><a href="https://wa.me/2348109948221?text=Hello%20AWH%2C%20I'd%20like%20to%20book%20a%20private%20viewing%20for%20a%20timepiece."
+                                class="hover:text-luxury-copper transition">Private Viewing</a></li>
+                        <li><a href="https://wa.me/2348109948221?text=Hello%20AWH%2C%20I%20want%20to%20sell%20my%20watch.%20Can%20you%20provide%20details%20on%20the%20process%3F" class="hover:text-luxury-copper transition">Sell Your Watch</a></li>
+                        <li>
+                            <a href="https://wa.me/2348109948221?text=Hello%20AWH%2C%20I%20am%20looking%20to%20source%20a%20specific%20timepiece.%20Can%20you%20help%20me%20find%20one%3F"
+                                class="hover:text-luxury-copper transition">
+                                Source a Timepiece
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-5">
+                    <h4 class="text-xs uppercase tracking-[0.3em] font-bold text-luxury-copper">Newsletter</h4>
+                    <p class="text-gray-500 text-xs">Be first to know about new arrivals and exclusive drops.</p>
+                    <div class="relative">
+                        <input type="email" placeholder="Your email"
+                            class="w-full bg-transparent border-b border-white/10 py-3 text-sm focus:border-luxury-copper outline-none transition placeholder-gray-600">
+                        <button
+                            class="absolute right-0 top-3 text-luxury-copper hover:text-luxury-copper transition duration-300"><i
+                                class="fa-solid fa-paper-plane"></i></button>
+                    </div>
+                </div>
+            </div>
+            
+           <div class="pt-10 border-t border-white/5 flex flex-col items-center">
+    
+    <div class="grid grid-cols-4 gap-7 text-gray-500 text-sm mb-8">
+        <a href="#" class="hover:text-white transition flex justify-center items-center">
+            <i class="fa-brands fa-instagram"></i>
+        </a>
+        <a href="#" class="hover:text-white transition flex justify-center items-center">
+            <i class="fa-brands fa-twitter"></i>
+        </a>
+        <a href="#" class="hover:text-white transition flex justify-center items-center">
+            <i class="fa-brands fa-facebook-f"></i>
+        </a>
+        <a href="#" class="hover:text-white transition flex justify-center items-center">
+            <i class="fa-brands fa-linkedin-in"></i>
+        </a>
+    </div>
+
+    <div class="text-[9px] text-gray-600 uppercase tracking-[0.4em] text-center leading-loose">
+        <p>&copy; <span id="current-year"></span> AWH Curated Timepieces <span class="mx-2">—</span> All Rights Reserved.</p>
+    </div>
+</div>
+
+    </footer>
+
+    <a href="https://wa.me/2348109948221?text=Hello%20AWH%2C%20I%20am%20interested%20in%20one%20of%20your%20timepieces.%20Can%20you%20provide%20more%20details%3F"
+        class="fixed bottom-8 right-8 z-50 bg-[#25D366] p-4 rounded-full shadow-2xl hover:scale-110 hover:bg-[#1da851] transition duration-300">
+        <svg class="w-5 h-5 text-white" fill="currentColor" viewBox="0 0 24 24">
+            <path
+                d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413Z" />
+        </svg>
+    </a>
+    <button id="luxuryScrollTop"
+        class="scroll-btn-hidden mr-2 z-50 bg-luxury-copper p-4 rounded-full transition duration-300">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="#C18A63" stroke-width="2.5"
+            stroke-linecap="round" stroke-linejoin="round">
+            <path d="M12 19V5M5 12l7-7 7 7" />
+        </svg>
+    </button>
+        <!-- cursor ring animation -->
+    <div id="cursor-dot"></div>
+    <div id="cursor-ring"></div>
+<script src="script.js"></script>
+
+
+</body>
+</html>

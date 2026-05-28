@@ -1,0 +1,169 @@
+@import "tailwindcss";
+
+@theme {
+  --color-luxury-black: #0F1113;
+  --color-luxury-cream: #F4F1EA;
+  --color-luxury-copper: #C18A63;
+  
+  --font-serif: "Instrument Serif", serif;
+  --font-sans: "Inter Tight", sans-serif;
+  
+  --letter-spacing-luxury: 0.2em;
+}
+
+@tailwind utilities;
+
+
+
+body {
+            font-family: 'Roboto', sans-serif;
+            background-color: #0a0a0a;
+            color: white;
+        }
+
+        * {
+            cursor: none;
+        }
+
+        #cursor-dot {
+            width: 8px;
+            height: 8px;
+            background: #C18A63;
+            border-radius: 50%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 9999;
+            transition: transform 0.1s ease;
+        }
+
+        #cursor-ring {
+            width: 36px;
+            height: 36px;
+            border: 1px solid #C18A63;
+            border-radius: 50%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            pointer-events: none;
+            z-index: 9998;
+            transition: transform 0.10s ease, width 0.3s ease, height 0.3s ease, background 0.8s ease;
+        }
+
+        #cursor-ring.hovering {
+            width: 60px;
+            height: 60px;
+            background: rgba(212, 175, 55, 0.1);
+            border-color: #C18A63;
+        }
+
+        .serif {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .gradient-overlay {
+            background: linear-gradient(0deg, rgba(10, 10, 10, 1) 0%, rgba(10, 10, 10, 0) 100%);
+        }
+
+        .reveal {
+            opacity: 0;
+            transform: translateY(20px);
+            transition: all 0.8s ease;
+        }
+
+        .reveal.active {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Mobile menu */
+        #mobile-nav {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.35s ease;
+        }
+
+        #mobile-nav.open {
+            max-height: 300px;
+        }
+
+        #luxuryScrollTop {
+            position: fixed;
+            bottom: 110px;
+            /* High enough to stay above your WhatsApp button */
+            right: 25px;
+            z-index: 9999;
+            width: 50px;
+            height: 50px;
+            background: #1a1a1a;
+            /* Pure charcoal */
+            border: 1px solid #C18A63;
+            /* Gold border */
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.4);
+            -webkit-backdrop-filter: blur(50px);
+            backdrop-filter: blur(50px);
+
+        }
+
+
+        .scroll-btn-hidden {
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(20px);
+
+
+        }
+
+
+        .scroll-btn-visible {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+        }
+
+       
+
+        #luxuryScrollTop:hover svg {
+            stroke: #C18A63;
+            /* Turn arrow dark when background turns gold */
+        }
+
+
+        .hero {
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1.2s ease forwards;
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+
+
+        /*  slider show */
+   /* Add this to your style.css */
+#slider {
+    -ms-overflow-style: none;  /* Internet Explorer 10+ */
+    scrollbar-width: none;  /* Firefox */
+}
+
+#slider::-webkit-scrollbar { 
+    display: none;  /* Safari and Chrome */
+}
+
+/* Prevents images from being dragged/selected while you're sliding the container */
+#slider img {
+    pointer-events: none;
+    user-select: none;
+}
