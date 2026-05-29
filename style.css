@@ -77,26 +77,24 @@ body {
             transform: translateY(0);
         }
 
-       /* Mobile menu overlay styling */
+       /* Mobile menu */
 #mobile-nav {
     position: fixed;
-    top: 80px; /* Adjust this to match the exact height of your main navbar */
+    top: 70px; 
     left: 0;
     width: 100%;
-    height: calc(100vh - 80px); /* Fills the rest of the current screen view */
+    height: 100vh ;
     background-color: rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(10px);
     border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-    
-    /* Smooth slide down animation */
     transform: translateY(-100%);
     opacity: 0;
     pointer-events: none;
     transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), opacity 0.3s ease;
-    z-index: 40;
+    z-index: 1000;
 }
 
-/* When the menu has the .open class */
+
 #mobile-nav.open {
     transform: translateY(0);
     opacity: 1;
@@ -106,7 +104,6 @@ body {
         #luxuryScrollTop {
             position: fixed;
             bottom: 110px;
-            /* High enough to stay above your WhatsApp button */
             right: 25px;
             z-index: 9999;
             width: 50px;

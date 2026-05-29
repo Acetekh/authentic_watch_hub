@@ -91,6 +91,9 @@
             </nav>
         </div>
     
+
+
+
   <!-- 1. MINIMALIST SPATIAL HERO -->
 <section class="relative min-h-[90vh] w-full flex items-center bg-black overflow-hidden border-b border-white/[0.05]">
     <!-- Deep Ambient Glow Layer -->
@@ -122,18 +125,21 @@
                 Step into a modern, uncompromised vault where the boundaries between fine investment assets and elite curation disappear. This is the next era of luxury procurement.
             </p>
             
-            <div class="flex items-center gap-8 pt-4">
-                <button class="bg-white text-black font-semibold uppercase tracking-widest text-[10px] px-10 py-4 rounded-xl hover:bg-luxury-copper hover:text-black transition-all duration-300 shadow-xl hover:-translate-y-0.5">
-                    Explore Collections
-                </button>
-                <span class="text-[10px] uppercase tracking-[0.2em] text-neutral-400 border-b border-neutral-800 pb-1 cursor-pointer hover:text-luxury-copper hover:border-luxury-copper transition-all duration-300">
-                    Our Mandate &rarr;
-                </span>
-            </div>
+<div class="flex flex-col sm:flex-row  sm:items-center gap-6 sm:gap-8 pt-4">
+    <button class="w-full sm:w-auto bg-white text-black uppercase tracking-widest text-[10px] px-10 py-4 rounded-xl hover:bg-luxury-copper hover:text-white transition-all duration-300 shadow-xl hover:-translate-y-0.5 text-center">
+        View Collections
+    </button>
+    <span class="text-[10px] sm:w-auto uppercase tracking-[0.2em] text-neutral-400 border-b border-neutral-800 pb-1 cursor-pointer hover:text-luxury-copper hover:border-luxury-copper transition-all duration-300 text-center sm:text-left block sm:inline mt-2 sm:mt-0">
+        Our Mandate &rarr;
+    </span>
+</div>
         </div>
 
     </div>
 </section>
+
+
+
 
 <!-- 2. TRIPLE VAULT SERVICES ROW (The 3-Card Structure) -->
 <section class="py-32 bg-black border-b border-white/[0.05] relative">
@@ -292,6 +298,59 @@
 
     </div>
 </section>
+
+
+
+
+
+<section class="py-24 bg-black reveal">
+    <div class="container mx-auto px-8 max-w-4xl">
+         <h2 class="serif text-3xl text-center mb-5">Common Enquiries</h2>
+        <p class="serif text-gray-400 leading-relaxed text-center mb-16">Information regarding acquisition and private viewings</p>
+
+
+        
+        <div class="space-y-4">
+            <div class="faq-item border-b border-white/5 pb-4 group cursor-pointer" onclick="handleAccordion(this)">
+                <div class="flex justify-between items-center py-4">
+                    <h3 class="uppercase tracking-widest text-[11px] group-hover:text-luxury-copper transition duration-300">Do you accept trade-ins?</h3>
+                    <i class="fa-solid fa-plus text-[9px] text-gray-600 transition-transform duration-500"></i>
+                </div>
+                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                    <p class="text-gray-500 text-xs leading-relaxed max-w-2xl pb-6">
+                        Yes. We facilitate trade-ins for specific high-demand models. Our specialists perform a physical evaluation in Lekki to determine the trade-in value against your new acquisition.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item border-b border-white/5 pb-4 group cursor-pointer" onclick="handleAccordion(this)">
+                <div class="flex justify-between items-center py-4">
+                    <h3 class="uppercase tracking-widest text-[11px] group-hover:text-luxury-copper transition duration-300">How do I view a watch in person?</h3>
+                    <i class="fa-solid fa-plus text-[9px] text-gray-600 transition-transform duration-500"></i>
+                </div>
+                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                    <p class="text-gray-500 text-xs leading-relaxed max-w-2xl pb-6">
+                        Physical viewings are available by appointment only at our secure lounge in Lekki, Lagos. This ensures total privacy and security for both parties.
+                    </p>
+                </div>
+            </div>
+
+            <div class="faq-item border-b border-white/5 pb-4 group cursor-pointer" onclick="handleAccordion(this)">
+                <div class="flex justify-between items-center py-4">
+                    <h3 class="uppercase tracking-widest text-[11px] group-hover:text-luxury-copper transition duration-300">What payment methods are accepted?</h3>
+                    <i class="fa-solid fa-plus text-[9px] text-gray-600 transition-transform duration-500"></i>
+                </div>
+                <div class="faq-answer max-h-0 overflow-hidden transition-all duration-500 ease-in-out">
+                    <p class="text-gray-500 text-xs leading-relaxed max-w-2xl pb-6">
+                        We accept secure bank transfers and certified checks. For international clients, we facilitate payments through secure escrow services to protect funds until delivery.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
     <!-- FOOTER -->
     <footer class="bg-zinc-950 border-t border-white/5 pt-20 pb-10">
         <div class="container mx-auto px-8">
